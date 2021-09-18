@@ -42,6 +42,7 @@ const Settings = ({ navigation }: any) => {
           height={30}
           style={{ transform: [{ rotateY: "180deg" }] }}
           color={colors.white}
+          
         />
       </TouchableOpacity>
       <View

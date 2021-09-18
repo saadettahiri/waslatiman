@@ -112,11 +112,21 @@ export default function App() {
                   style={{
                     backgroundColor: colors.white,
                     borderRadius: 50,
-                    width: 80,
-                    height: 80,
+                    width: 75,
+                    height: 75,
                     alignItems: "center",
                     justifyContent: "center",
+                    bottom: 10,
                     opacity: focused ? 1 : 0.5,
+                    shadowColor: "#000",
+                    shadowOffset: {
+                      width: 0,
+                      height: 4,
+                    },
+                    shadowOpacity: 0.32,
+                    shadowRadius: 5.46,
+
+                    elevation: 9,
                   }}
                 >
                   <Images.Kaaba width={30} height={30} />
