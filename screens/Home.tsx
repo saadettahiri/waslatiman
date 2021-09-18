@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import {
   heightPercentageToDP,
@@ -13,6 +13,7 @@ import Settings from "./Settings";
 
 const HomeScreen = ({ navigation }: any) => {
   const insets = useSafeAreaInsets();
+  const [times, setTimes] = useState([1, 2, 3, 4, 5]);
   return (
     <ScrollView
       style={{
@@ -37,10 +38,10 @@ const HomeScreen = ({ navigation }: any) => {
         }}
       >
         <TouchableOpacity
-          style={{ position: "absolute", top: insets.top + 10, end: 20 }}
+          style={{ position: "absolute", top: insets.top, end: 20 }}
           onPress={() => navigation.push("Settings")}
         >
-          <Images.Settings width={40} height={40} />
+          <Images.Settings width={35} height={35} />
         </TouchableOpacity>
         <Images.Bismillah width={widthPercentageToDP("70%")} />
       </View>
@@ -57,6 +58,7 @@ const HomeScreen = ({ navigation }: any) => {
           shadowOffset: { width: -5, height: 10 },
           shadowOpacity: 0.15,
           shadowRadius: 9,
+          elevation: 5,
         }}
       >
         <Text
@@ -77,11 +79,11 @@ const HomeScreen = ({ navigation }: any) => {
         >
           حسب توقيت فاس
         </Text>
-        {[1, 2, 3, 4, 5].map((item, index) => (
+        {times.map((item, index) => (
           <View
             key={index}
             style={{
-              borderBottomWidth: 1,
+              borderBottomWidth: times.length - 1 === index ? 0 : 1,
               borderBottomColor: colors.black,
               width: "100%",
               flexDirection: "row",
@@ -122,6 +124,7 @@ const HomeScreen = ({ navigation }: any) => {
           shadowOffset: { width: -5, height: 10 },
           shadowOpacity: 0.15,
           shadowRadius: 9,
+          elevation: 5,
         }}
       >
         <View

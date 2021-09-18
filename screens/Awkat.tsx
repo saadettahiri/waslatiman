@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { colors } from "../constants/colors";
@@ -6,6 +6,7 @@ import Images from "../constants/images";
 
 const Awkat = () => {
   const insets = useSafeAreaInsets();
+  const [times, setTimes] = useState([1, 2, 3, 4, 5]);
   return (
     <View
       style={{
@@ -23,6 +24,7 @@ const Awkat = () => {
           shadowOffset: { width: -5, height: 10 },
           shadowOpacity: 0.15,
           shadowRadius: 9,
+          elevation: 5,
         }}
       >
         <View
@@ -65,7 +67,10 @@ const Awkat = () => {
               <Images.Left
                 width={30}
                 height={30}
-                style={{ transform: [{ rotateY: "180deg" }] }}
+                style={{
+                  transform: [{ rotateY: "180deg" }],
+                }}
+                color={colors.darkGreen}
               />
             </TouchableOpacity>
             <View
@@ -88,14 +93,14 @@ const Awkat = () => {
               </View>
             </View>
             <TouchableOpacity style={{ justifyContent: "center" }}>
-              <Images.Left width={30} height={30} />
+              <Images.Left width={30} height={30} color={colors.darkGreen} />
             </TouchableOpacity>
           </View>
-          {[1, 2, 3, 4, 5].map((item, index) => (
+          {times.map((item, index) => (
             <View
               key={index}
               style={{
-                borderBottomWidth: 1,
+                borderBottomWidth: times.length - 1 === index ? 0 : 1,
                 borderBottomColor: colors.black,
                 width: "100%",
                 flexDirection: "row",

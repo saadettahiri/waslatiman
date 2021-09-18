@@ -29,6 +29,11 @@ const Settings = ({ navigation }: any) => {
           backgroundColor: colors.darkGreen,
           padding: 10,
           borderRadius: 50,
+          shadowColor: colors.black,
+          shadowOffset: { width: -5, height: 10 },
+          shadowOpacity: 0.15,
+          shadowRadius: 9,
+          elevation: 5,
         }}
         onPress={() => navigation.pop()}
       >
@@ -48,6 +53,11 @@ const Settings = ({ navigation }: any) => {
           padding: 20,
           alignItems: "center",
           width: "100%",
+          shadowColor: colors.black,
+          shadowOffset: { width: -5, height: 10 },
+          shadowOpacity: 0.15,
+          shadowRadius: 9,
+          elevation: 5,
         }}
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -80,6 +90,11 @@ const Settings = ({ navigation }: any) => {
           width: "100%",
           alignItems: "center",
           marginTop: 10,
+          shadowColor: colors.black,
+          shadowOffset: { width: -5, height: 10 },
+          shadowOpacity: 0.15,
+          shadowRadius: 9,
+          elevation: 5,
         }}
       >
         <View style={{ flexDirection: "row", alignItems: "center" }}>

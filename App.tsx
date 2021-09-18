@@ -78,7 +78,7 @@ export default function App() {
             component={Home}
             options={{
               headerShown: false,
-              tabBarLabel: "أوقات الصلاة",
+              tabBarLabel: "الرئيسية",
               tabBarLabelStyle: { color: colors.white, fontSize: 12 },
               tabBarIcon: ({ color, focused }) => (
                 <View style={{ opacity: focused ? 1 : 0.5 }}>

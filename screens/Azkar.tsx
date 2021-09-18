@@ -78,6 +78,7 @@ const Azkar = ({ type }: Props) => {
                 shadowOffset: { width: -5, height: 10 },
                 shadowOpacity: 0.15,
                 shadowRadius: 9,
+                elevation: 5,
               }}
             >
               <View
@@ -93,6 +94,7 @@ const Azkar = ({ type }: Props) => {
                   shadowOffset: { width: -5, height: 10 },
                   shadowOpacity: 0.15,
                   shadowRadius: 9,
+                  elevation: 5,
                 }}
               >
                 <Text
