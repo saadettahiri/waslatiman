@@ -19,6 +19,10 @@ const Awkat = () => {
           height: "100%",
           justifyContent: "center",
           alignItems: "center",
+          shadowColor: colors.black,
+          shadowOffset: { width: -5, height: 10 },
+          shadowOpacity: 0.15,
+          shadowRadius: 9,
         }}
       >
         <View

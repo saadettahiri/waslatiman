@@ -74,6 +74,10 @@ const Azkar = ({ type }: Props) => {
                 borderRadius: 10,
                 paddingVertical: 30,
                 paddingHorizontal: 20,
+                shadowColor: colors.black,
+                shadowOffset: { width: -5, height: 10 },
+                shadowOpacity: 0.15,
+                shadowRadius: 9,
               }}
             >
               <View

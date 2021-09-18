@@ -53,6 +53,10 @@ const HomeScreen = ({ navigation }: any) => {
           paddingHorizontal: 30,
           alignItems: "center",
           borderRadius: 10,
+          shadowColor: colors.black,
+          shadowOffset: { width: -5, height: 10 },
+          shadowOpacity: 0.15,
+          shadowRadius: 9,
         }}
       >
         <Text
@@ -114,6 +118,10 @@ const HomeScreen = ({ navigation }: any) => {
           paddingTop: 10,
           alignItems: "center",
           borderRadius: 10,
+          shadowColor: colors.black,
+          shadowOffset: { width: -5, height: 10 },
+          shadowOpacity: 0.15,
+          shadowRadius: 9,
         }}
       >
         <View
