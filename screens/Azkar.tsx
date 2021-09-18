@@ -63,10 +63,10 @@ const Azkar = ({ type }: Props) => {
           data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 5, 10]}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
-          style={{ paddingVertical: 20 }}
+          style={{ paddingTop: 20 }}
+          keyExtractor={(item, index) => index.toString()}
           renderItem={({ item, index }) => (
             <View
-              key={index}
               style={{
                 backgroundColor: colors.darkGreen,
                 width: "100%",

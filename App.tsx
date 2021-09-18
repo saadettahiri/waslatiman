@@ -13,6 +13,8 @@ import AzkarMasa from "./screens/AzkarMasa";
 import AzkarSabah from "./screens/AzkarSabah";
 import Qibla from "./screens/Qibla";
 import Awkat from "./screens/Awkat";
+import Images from "./constants/images";
+import { colors } from "./constants/colors";
 
 I18nManager.forceRTL(true);
 
@@ -66,31 +68,90 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Tabs.Navigator>
+        <Tabs.Navigator
+          screenOptions={{
+            tabBarStyle: { backgroundColor: colors.lightGreen },
+          }}
+        >
           <Tabs.Screen
             name="Home"
             component={Home}
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              tabBarLabel: "أوقات الصلاة",
+              tabBarLabelStyle: { color: colors.white, fontSize: 12 },
+              tabBarIcon: ({ color, focused }) => (
+                <View style={{ opacity: focused ? 1 : 0.5 }}>
+                  <Images.Home width={20} height={20} />
+                </View>
+              ),
+            }}
           />
           <Tabs.Screen
             name="AzkarSabah"
             component={AzkarSabah}
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              tabBarLabel: "أذكار الصباح",
+              tabBarLabelStyle: { color: colors.white, fontSize: 12 },
+              tabBarIcon: ({ color, focused }) => (
+                <View style={{ opacity: focused ? 1 : 0.5 }}>
+                  <Images.Morning width={30} height={30} />
+                </View>
+              ),
+            }}
           />
           <Tabs.Screen
             name="Qibla"
             component={Qibla}
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              tabBarLabel: "",
+              tabBarIcon: ({ color, focused }) => (
+                <View
+                  style={{
+                    backgroundColor: colors.white,
+                    borderRadius: 50,
+                    width: 80,
+                    height: 80,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    opacity: focused ? 1 : 0.5,
+                  }}
+                >
+                  <Images.Kaaba width={30} height={30} />
+                  <Text style={{ color: colors.darkGreen }}>القبلة</Text>
+                </View>
+              ),
+            }}
           />
           <Tabs.Screen
             name="AzkarMasa"
             component={AzkarMasa}
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              tabBarLabel: "أذكار المساء",
+              tabBarLabelStyle: { color: colors.white, fontSize: 12 },
+              tabBarIcon: ({ color, focused }) => (
+                <View style={{ opacity: focused ? 1 : 0.5 }}>
+                  <Images.HalfMoon width={30} height={30} />
+                </View>
+              ),
+            }}
           />
           <Tabs.Screen
             name="Awkat"
             component={Awkat}
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              tabBarLabel: "أوقات الصلاة",
+              tabBarLabelStyle: { color: colors.white, fontSize: 12 },
+              tabBarIcon: ({ color, focused }) => (
+                <View style={{ opacity: focused ? 1 : 0.5 }}>
+                  <Images.Praying width={30} height={30} />
+                </View>
+              ),
+            }}
           />
         </Tabs.Navigator>
         <StatusBar style="auto" />
