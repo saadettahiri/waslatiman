@@ -14,16 +14,20 @@ import Settings from "./Settings";
 const HomeScreen = ({ navigation }: any) => {
   const insets = useSafeAreaInsets();
   return (
-    <View
+    <ScrollView
       style={{
         flex: 1,
-        alignItems: "center",
       }}
+      contentContainerStyle={{
+        alignItems: "center",
+        paddingBottom: 10,
+      }}
+      bounces={false}
     >
       <View
         style={{
           width: "100%",
-          height: "40%",
+          height: heightPercentageToDP("35%"),
           borderBottomStartRadius: 200,
           borderBottomEndRadius: 200,
           backgroundColor: colors.darkGreen,
@@ -33,7 +37,7 @@ const HomeScreen = ({ navigation }: any) => {
         }}
       >
         <TouchableOpacity
-          style={{ position: "absolute", top: insets.top, start: 20 }}
+          style={{ position: "absolute", top: insets.top + 10, end: 20 }}
           onPress={() => navigation.push("Settings")}
         >
           <Images.Settings width={40} height={40} />
@@ -143,12 +147,18 @@ const HomeScreen = ({ navigation }: any) => {
             borderBottomEndRadius: 10,
           }}
         >
-          <Text style={{ color: colors.lightGray, fontSize: 18 }}>
+          <Text
+            style={{
+              color: colors.lightGray,
+              fontSize: 18,
+              textAlign: "left",
+            }}
+          >
             اللهمَّ إني أسألُك علمًا نافعًا ورزقًا طيبًا وعملًا متقبلً
           </Text>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

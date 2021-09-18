@@ -50,7 +50,12 @@ const Settings = ({ navigation }: any) => {
           width: "100%",
         }}
       >
-        <View>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Images.EnabledBell
+            width={20}
+            height={20}
+            style={{ marginEnd: 10 }}
+          />
           <Text
             style={{
               fontSize: 20,
@@ -58,11 +63,11 @@ const Settings = ({ navigation }: any) => {
               fontFamily: "SegoeUIBold",
             }}
           >
-            sdqdsq
+            إلغاء تنبيهات
           </Text>
         </View>
         <View>
-          <Text>aera</Text>
+          <Text>Switch</Text>
         </View>
       </View>
       <View
@@ -77,7 +82,8 @@ const Settings = ({ navigation }: any) => {
           marginTop: 10,
         }}
       >
-        <View>
+        <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <Images.Help width={20} height={20} style={{ marginEnd: 10 }} />
           <Text
             style={{
               fontSize: 20,
@@ -85,11 +91,8 @@ const Settings = ({ navigation }: any) => {
               fontFamily: "SegoeUIBold",
             }}
           >
-            sdqdsq
+            المساعدة
           </Text>
-        </View>
-        <View>
-          <Text>aera</Text>
         </View>
       </View>
       <View
@@ -110,15 +113,21 @@ const Settings = ({ navigation }: any) => {
         <View
           style={{
             flexDirection: "row",
-            width: "100%",
+            width: 220,
             justifyContent: "space-around",
+            alignItems: "center",
             marginTop: 10,
-            backgroundColor: "red",
           }}
         >
-          <Text>aze</Text>
-          <Text>aze</Text>
-          <Text>aze</Text>
+          <View style={{ alignItems: "center", flex: 1 }}>
+            <Images.Facebook width={60} height={60} />
+          </View>
+          <View style={{ alignItems: "center", flex: 1 }}>
+            <Images.Twitter width={60} height={60} />
+          </View>
+          <View style={{ alignItems: "center", flex: 1 }}>
+            <Images.Whatsapp width={60} height={60} />
+          </View>
         </View>
       </View>
     </View>

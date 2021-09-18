@@ -12,6 +12,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import AzkarMasa from "./screens/AzkarMasa";
 import AzkarSabah from "./screens/AzkarSabah";
 import Qibla from "./screens/Qibla";
+import Awkat from "./screens/Awkat";
 
 I18nManager.forceRTL(true);
 
@@ -37,6 +38,11 @@ export default function App() {
       require("./assets/images/disabledBell.svg"),
       require("./assets/images/compass.svg"),
       require("./assets/images/schedule.svg"),
+      require("./assets/images/facebook.svg"),
+      require("./assets/images/twitter.svg"),
+      require("./assets/images/whatsapp.svg"),
+      require("./assets/images/help.svg"),
+      require("./assets/images/headerBackground.png"),
     ];
 
     const cacheImages = images.map((item) => {
@@ -82,7 +88,7 @@ export default function App() {
           />
           <Tabs.Screen
             name="Awkat"
-            component={Home}
+            component={Awkat}
             options={{ headerShown: false }}
           />
         </Tabs.Navigator>
@@ -91,12 +97,3 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

@@ -10,6 +10,10 @@ import EnabledBell from "../assets/images/enabledBell.svg";
 import DisabledBell from "../assets/images/disabledBell.svg";
 import Compass from "../assets/images/compass.svg";
 import Schedule from "../assets/images/schedule.svg";
+import Facebook from "../assets/images/facebook.svg";
+import Twitter from "../assets/images/twitter.svg";
+import Whatsapp from "../assets/images/whatsapp.svg";
+import Help from "../assets/images/help.svg";
 
 export default {
   Bismillah,
@@ -24,4 +28,8 @@ export default {
   DisabledBell,
   Compass,
   Schedule,
+  Facebook,
+  Twitter,
+  Whatsapp,
+  Help,
 };
