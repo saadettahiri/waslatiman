@@ -89,6 +89,10 @@ const Azkar = ({ type }: Props) => {
                   borderRadius: 50,
                   padding: 10,
                   backgroundColor: colors.darkGreen,
+                  shadowColor: colors.black,
+                  shadowOffset: { width: -5, height: 10 },
+                  shadowOpacity: 0.15,
+                  shadowRadius: 9,
                 }}
               >
                 <Text
