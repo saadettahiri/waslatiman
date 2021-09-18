@@ -67,7 +67,7 @@ const HomeScreen = ({ navigation }: any) => {
         <Text
           style={{
             color: colors.lightBlack,
-            fontFamily: "SegoeUI",
+            fontFamily: "SegoeUIBold",
             fontSize: 15,
           }}
         >

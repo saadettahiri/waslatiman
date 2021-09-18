@@ -43,6 +43,7 @@ export default function App() {
       require("./assets/images/whatsapp.svg"),
       require("./assets/images/help.svg"),
       require("./assets/images/headerBackground.png"),
+      require("./assets/images/left.svg"),
     ];
 
     const cacheImages = images.map((item) => {

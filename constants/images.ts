@@ -14,6 +14,7 @@ import Facebook from "../assets/images/facebook.svg";
 import Twitter from "../assets/images/twitter.svg";
 import Whatsapp from "../assets/images/whatsapp.svg";
 import Help from "../assets/images/help.svg";
+import Left from "../assets/images/left.svg";
 
 export default {
   Bismillah,
@@ -32,4 +33,5 @@ export default {
   Twitter,
   Whatsapp,
   Help,
+  Left,
 };
