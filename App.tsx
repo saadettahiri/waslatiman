@@ -9,6 +9,9 @@ import { Asset } from "expo-asset";
 import { useFonts } from "expo-font";
 import { I18nManager } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import AzkarMasa from "./screens/AzkarMasa";
+import AzkarSabah from "./screens/AzkarSabah";
+import Qibla from "./screens/Qibla";
 
 I18nManager.forceRTL(true);
 
@@ -20,7 +23,6 @@ export default function App() {
     SegoeUIBold: require("./assets/fonts/Segoe_UI_Bold.ttf"),
     SegoeUI: require("./assets/fonts/Segoe_UI.ttf"),
   });
-
   const loadImages = async () => {
     const images = [
       require("./assets/images/bismillah.svg"),
@@ -60,6 +62,26 @@ export default function App() {
         <Tabs.Navigator>
           <Tabs.Screen
             name="Home"
+            component={Home}
+            options={{ headerShown: false }}
+          />
+          <Tabs.Screen
+            name="AzkarSabah"
+            component={AzkarSabah}
+            options={{ headerShown: false }}
+          />
+          <Tabs.Screen
+            name="Qibla"
+            component={Qibla}
+            options={{ headerShown: false }}
+          />
+          <Tabs.Screen
+            name="AzkarMasa"
+            component={AzkarMasa}
+            options={{ headerShown: false }}
+          />
+          <Tabs.Screen
+            name="Awkat"
             component={Home}
             options={{ headerShown: false }}
           />

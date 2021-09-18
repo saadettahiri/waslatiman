@@ -1,5 +1,7 @@
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import {
   heightPercentageToDP,
   widthPercentageToDP,
@@ -7,8 +9,9 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { colors } from "../constants/colors";
 import Images from "../constants/images";
+import Settings from "./Settings";
 
-const Home = () => {
+const HomeScreen = ({ navigation }: any) => {
   const insets = useSafeAreaInsets();
   return (
     <View
@@ -29,11 +32,12 @@ const Home = () => {
           alignItems: "center",
         }}
       >
-        <Images.Settings
-          width={40}
-          height={40}
+        <TouchableOpacity
           style={{ position: "absolute", top: insets.top, start: 20 }}
-        />
+          onPress={() => navigation.push("Settings")}
+        >
+          <Images.Settings width={40} height={40} />
+        </TouchableOpacity>
         <Images.Bismillah width={widthPercentageToDP("70%")} />
       </View>
       <View
@@ -145,6 +149,25 @@ const Home = () => {
         </View>
       </View>
     </View>
+  );
+};
+
+const Stack = createStackNavigator();
+
+const Home = () => {
+  return (
+    <Stack.Navigator initialRouteName="HomeScreen">
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Settings"
+        component={Settings}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
   );
 };
 
